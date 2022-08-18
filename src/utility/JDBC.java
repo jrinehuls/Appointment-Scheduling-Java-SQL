@@ -1,9 +1,8 @@
-package helper;
+package utility;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
 
 public abstract class JDBC {
 
@@ -47,6 +46,7 @@ public abstract class JDBC {
         }
     }
 
+    /*
     public static void makePreparedStatement(String sqlStatement, Connection conn) throws SQLException {
         if (conn != null) {
             preparedStatement = conn.prepareStatement(sqlStatement);
@@ -65,5 +65,6 @@ public abstract class JDBC {
             return null;
         }
     }
+    */
 
 }

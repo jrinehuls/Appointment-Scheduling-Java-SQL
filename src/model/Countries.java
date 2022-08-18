@@ -18,4 +18,9 @@ public class Countries {
         return name;
     }
 
+    @Override
+    public String toString(){
+        return getId() + ".  " + getName();
+    }
+
 }

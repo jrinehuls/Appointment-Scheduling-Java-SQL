@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddCustomerScreenController">
+   <children>
+      <Button layoutX="900.0" layoutY="700.0" mnemonicParsing="false" onAction="#addCustomer" prefHeight="30.0" prefWidth="80.0" text="Save" />
+      <Button layoutX="1000.0" layoutY="700.0" mnemonicParsing="false" onAction="#toMain" prefHeight="30.0" prefWidth="80.0" text="Cancel" />
+      <Label layoutX="150.0" layoutY="150.0" prefHeight="30.0" prefWidth="100.0" text="Customer name" />
+      <Label layoutX="150.0" layoutY="250.0" prefHeight="30.0" prefWidth="100.0" text="Address" />
+      <Label layoutX="150.0" layoutY="350.0" prefHeight="30.0" prefWidth="100.0" text="Postal Code" />
+      <Label layoutX="150.0" layoutY="450.0" prefHeight="30.0" prefWidth="100.0" text="Phone number" />
+      <Label alignment="CENTER" layoutX="550.0" layoutY="100.0" prefHeight="30.0" prefWidth="150.0" text="Countries">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="850.0" layoutY="100.0" prefHeight="30.0" prefWidth="150.0" text="First Level Divisions">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="countriesCB" layoutX="550.0" layoutY="150.0" onAction="#setDivisionCombo" prefWidth="150.0" promptText="Choose a country" />
+      <ComboBox fx:id="divisionsCB" layoutX="850.0" layoutY="150.0" onAction="#setDivisionId" prefWidth="150.0" promptText="Choose a division" />
+      <TextField fx:id="custNameTextField" layoutX="250.0" layoutY="150.0" prefHeight="30.0" prefWidth="150.0" />
+      <TextField fx:id="addressTextField" layoutX="250.0" layoutY="250.0" prefHeight="30.0" prefWidth="150.0" />
+      <TextField fx:id="postalCodeTextField" layoutX="250.0" layoutY="350.0" prefHeight="30.0" prefWidth="150.0" />
+      <TextField fx:id="phoneTextField" layoutX="250.0" layoutY="450.0" prefHeight="30.0" prefWidth="150.0" />
+      <Label fx:id="custNameLabel" alignment="CENTER" layoutX="225.0" layoutY="100.0" prefHeight="30.0" prefWidth="200.0" text="Label" textFill="RED" />
+      <Label fx:id="addressLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="225.0" layoutY="200.0" prefHeight="30.0" prefWidth="200.0" text="label" textFill="RED" />
+      <Label fx:id="postalCodeLabel" alignment="CENTER" layoutX="225.0" layoutY="300.0" prefHeight="30.0" prefWidth="200.0" text="Label" textFill="RED" />
+      <Label fx:id="phoneLabel" alignment="CENTER" layoutX="225.0" layoutY="400.0" prefHeight="30.0" prefWidth="200.0" text="Label" textFill="RED" />
+      <Label layoutX="100.0" layoutY="50.0" text="Add Customer Form">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

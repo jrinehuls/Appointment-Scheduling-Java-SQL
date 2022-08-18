@@ -1,0 +1,54 @@
+//----------------------------This is here to use later for converting to eastern time----------------------------------
+//---------------------------start is a LocalDateTime object------------------------------------------------------------
+                ZoneId zoneId = ZoneId.of("America/New_York");
+                ZonedDateTime startZdt = start.atZone(ZoneId.systemDefault());
+                ZonedDateTime startZtdConverted = startZdt.withZoneSameInstant(zoneId);
+                LocalDateTime startLdt = startZtdConverted.toLocalDateTime();
+                System.out.println(startLdt);
+
+//----------------------------------SQL Queries for month and week (Start is the column name)---------------------------
+SELECT *
+FROM appointments
+# WHERE month(Start) = 5;
+# WHERE week(Start) = 21;
+# WHERE day(Start) = 28;
+
+//-------------------------------Method to use for seeing if appointment in 15 minutes----------------------------------
+someTimeVariable = LocalDateTime.now();
+
+//------------------------------For working on DBCustomers--------------------------------------------------------------
+    public static int addCustomer(Customers customer) throws SQLException {
+        String sql = "INSERT INTO customers (Customer_Name, Address, Postal_Code, Phone, Division_ID) VALUES(?, ?, ?, ?, ?);";
+        PreparedStatement ps = JDBC.getConnection().prepareStatement(sql);
+        ps.setString(1, customer.getName());
+        ps.setString(2, customer.getAddress());
+        ps.setString(3, customer.getPostalCode());
+        ps.setString(4, customer.getPhone());
+        ps.setInt(5, customer.getDivisionId());
+        int rowsAffected = ps.executeUpdate();
+        return rowsAffected;
+    }
+
+    public static int modifyCustomer(Customers customer) throws SQLException {
+        String sql = "UPDATE customers Set Customer_Name = ?, Address = ?, Postal_Code = ?, Phone = ?, Division_ID = ? WHERE Customer_ID = ?";
+        PreparedStatement ps = JDBC.getConnection().prepareStatement(sql);
+        ps.setString(1, customer.getName());
+        ps.setString(2, customer.getAddress());
+        ps.setString(3, customer.getPostalCode());
+        ps.setString(4, customer.getPhone());
+        ps.setInt(5, customer.getDivisionId());
+        ps.setInt(6, customer.getCustomerId());
+        int rowsAffected = ps.executeUpdate();
+        return rowsAffected;
+    }
+
+    public static int deleteCustomer(Customers customer) throws SQLException {
+        String sql = "DELETE FROM customers WHERE Customer_ID = ?";
+        PreparedStatement ps = JDBC.getConnection().prepareStatement(sql);
+        ps.setInt(1, customer.getCustomerId());
+        int rowsAffected = ps.executeUpdate();
+        return rowsAffected;
+    }
+
+//---------------------------------------------------------------------------------------------------------------------
+

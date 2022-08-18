@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="84d95914-2a17-41eb-bf7d-35031e37d336" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_30.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/C195Project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/access/DBCountries.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/MainScreenController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helper/JDBC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Countries.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/MainScreen.fxml" afterDir="false" />
+    <list default="true" id="84d95914-2a17-41eb-bf7d-35031e37d336" name="Changes" comment="initial commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/access/DBCountries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataAccess/DBCountries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/MainScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/LoginScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helper/JDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/JDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Countries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Countries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/MainScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/LoginScreen.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +18,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="JavaFXApplication" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -38,7 +31,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2DGoDcaI5uYPO84e4geUbXvcU02" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -47,13 +42,20 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/jrine/IdeaProjects/C195Project",
+    "last_opened_file_path": "C:/Users/jrine/IdeaProjects/C482Project",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.pathVariables"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jrine\IdeaProjects\C195Project\src\controller" />
+      <recent name="C:\Users\jrine\IdeaProjects\C195Project\src" />
+      <recent name="C:\Users\jrine\IdeaProjects\C195Project" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="C195Project" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="main.Main" />
@@ -73,6 +75,14 @@
       <option name="presentableId" value="Default" />
       <updated>1660334664028</updated>
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1660510986879</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1660510986879</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -85,5 +95,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
 </project>
