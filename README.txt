@@ -7,8 +7,15 @@ Application version: 1.0
 Date: 08/24/2022
 IDE version: IntelliJ IDEA Community Edition 2022.2
 JDK version: JDK-17.0.4
-JavaFX version: JavaFX-SDK-18.0.1
-MySQL connector driver version: mysql-connector-java-8.0.30
+JavaFX version: JavaFX-SDK-18.0.1 (In repository, add whole lib folder to libraries.)
+MySQL connector driver version: mysql-connector-java-8.0.30 (In repository)
+
+What else you need: You need to have MySQL and create a new user named: sqlUser with a password: passw0rd! and a host
+    name of either 127.0.0.1 or localhost. create a database and name it client_schedule and open a new query tab.
+    copy from C195_db_ddl and paste and execute to create tables and populate with data. Since this project has 
+    appointments that made to be shown in the system timezone, SQL had to be changed to UTC time. Go to
+    "C:\ProgramData\MySQL\MySQL Server 8.0\my.ini" scroll to SERVER SECTION and find the line [mysqld] enter a line
+    below that and type: default-time-zone="+00:00" and save.
 
 Directions for how to run the program: Run the program in the IDE to launch the application. Log in using a correct
     username and password combination and click the login button. This brings you to the main screen. A pop-up lets
@@ -46,6 +53,3 @@ Directions for how to run the program: Run the program in the IDE to launch the 
     earlier than the current local time. These appointments are all in the past and are displayed in a TableView. CLick
     on the Exit to Main button to return to the main screen. To close the application, click on the X in the top right
     corner.
-
-Description of additional report from part A.3.f: This report shows all appointments that have end times that are
-    earlier than the current local time. These appointments are all in the past and are displayed in a TableView.
