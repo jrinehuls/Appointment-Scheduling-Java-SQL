@@ -7,7 +7,7 @@ User test successfully logged in on 2022-08-22 at 23:43
 User admin successfully logged in on 2022-08-22 at 23:43
 User dinnerman gave invalid log-in on 2022-08-22 at 23:44
 User test successfully logged in on 2022-08-22 at 23:47
-User Jamal gave invalid log-in on 2022-08-22 at 23:48
+User Justin gave invalid log-in on 2022-08-22 at 23:48
 User admin successfully logged in on 2022-08-22 at 23:48
 User  gave invalid log-in on 2022-08-23 at 12:53
 User test gave invalid log-in on 2022-08-23 at 12:53
