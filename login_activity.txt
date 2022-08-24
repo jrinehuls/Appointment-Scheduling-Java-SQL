@@ -1,0 +1,23 @@
+User test successfully logged in on 2022-08-22 at 20:33
+User test successfully logged in on 2022-08-22 at 23:00
+User test successfully logged in on 2022-08-22 at 23:02
+User test successfully logged in on 2022-08-22 at 23:03
+User test successfully logged in on 2022-08-22 at 23:06
+User test successfully logged in on 2022-08-22 at 23:43
+User admin successfully logged in on 2022-08-22 at 23:43
+User dinnerman gave invalid log-in on 2022-08-22 at 23:44
+User test successfully logged in on 2022-08-22 at 23:47
+User Jamal gave invalid log-in on 2022-08-22 at 23:48
+User admin successfully logged in on 2022-08-22 at 23:48
+User  gave invalid log-in on 2022-08-23 at 12:53
+User test gave invalid log-in on 2022-08-23 at 12:53
+User test gave invalid log-in on 2022-08-23 at 12:53
+User test successfully logged in on 2022-08-23 at 12:54
+User test successfully logged in on 2022-08-23 at 13:14
+User test successfully logged in on 2022-08-23 at 13:21
+User test successfully logged in on 2022-08-23 at 14:26
+User test successfully logged in on 2022-08-24 at 13:00
+User test successfully logged in on 2022-08-24 at 13:02
+User test successfully logged in on 2022-08-30 at 23:34
+User test successfully logged in on 2022-08-31 at 23:36
+User test successfully logged in on 2022-09-01 at 00:37
