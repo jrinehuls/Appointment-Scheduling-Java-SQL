@@ -3,7 +3,7 @@ package utility;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-
+/** Class for establishing a MySQL server connection. */
 public abstract class JDBC {
 
     private static final String protocol = "jdbc";
@@ -17,7 +17,7 @@ public abstract class JDBC {
     public static Connection connection;  // Connection Interface
     private static PreparedStatement preparedStatement;
 
-
+    /** Opens the connection to the server. */
     public static void openConnection()
     {
         try {
@@ -31,10 +31,13 @@ public abstract class JDBC {
         }
     }
 
+    /** Returns the connection to be used in other classes for SQL queries.
+     * @return The open connection is returned. */
     public static Connection getConnection() {
         return connection;
     }
 
+    /** Closes the connection to the server. */
     public static void closeConnection() {
         try {
             connection.close();
@@ -45,26 +48,5 @@ public abstract class JDBC {
             System.out.println("Error:" + e.getMessage());
         }
     }
-
-    /*
-    public static void makePreparedStatement(String sqlStatement, Connection conn) throws SQLException {
-        if (conn != null) {
-            preparedStatement = conn.prepareStatement(sqlStatement);
-        }
-        else {
-            System.out.println("Prepared Statement Creation Failed!");
-        }
-    }
-
-    public static PreparedStatement getPreparedStatement() throws SQLException {
-        if (preparedStatement != null) {
-            return preparedStatement;
-        }
-        else {
-            System.out.println("Null reference to Prepared Statement");
-            return null;
-        }
-    }
-    */
 
 }

@@ -16,12 +16,12 @@
          <children>
             <TableView fx:id="customersTable" layoutX="5.0" layoutY="50.0" prefHeight="230.0" prefWidth="1160.0">
               <columns>
-                <TableColumn fx:id="custCustIdCol" editable="false" prefWidth="120.0" resizable="false" sortType="DESCENDING" text="Customer ID" />
-                <TableColumn fx:id="custCustNameCol" editable="false" prefWidth="150.0" resizable="false" sortType="DESCENDING" text="Customer Name" />
-                  <TableColumn fx:id="custAddressCol" editable="false" prefWidth="450.0" resizable="false" sortType="DESCENDING" text="Address" />
-                  <TableColumn fx:id="custPostalCodeCol" editable="false" prefWidth="120.0" resizable="false" sortType="DESCENDING" text="Postal Code" />
-                  <TableColumn fx:id="custPhoneCol" editable="false" prefWidth="200.0" resizable="false" sortType="DESCENDING" text="Phone" />
-                  <TableColumn fx:id="custDivisionIdCol" editable="false" prefWidth="120.0" resizable="false" sortType="DESCENDING" text="Division ID" />
+                <TableColumn fx:id="custCustIdCol" editable="false" prefWidth="120.0" resizable="false" text="Customer ID" />
+                <TableColumn fx:id="custCustNameCol" editable="false" prefWidth="150.0" resizable="false" text="Customer Name" />
+                  <TableColumn fx:id="custAddressCol" editable="false" prefWidth="450.0" resizable="false" text="Address" />
+                  <TableColumn fx:id="custPostalCodeCol" editable="false" prefWidth="120.0" resizable="false" text="Postal Code" />
+                  <TableColumn fx:id="custPhoneCol" editable="false" prefWidth="200.0" resizable="false" text="Phone" />
+                  <TableColumn fx:id="custDivisionIdCol" editable="false" prefWidth="120.0" resizable="false" text="Division ID" />
               </columns>
             </TableView>
             <Button layoutX="1000.0" layoutY="295.0" mnemonicParsing="false" onAction="#deleteCustomer" prefHeight="30.0" prefWidth="130.0" text="Delete Customer" />
@@ -38,20 +38,20 @@
          <children>
             <TableView fx:id="appointmentsTable" layoutX="5.0" layoutY="50.0" prefHeight="230.0" prefWidth="1160.0">
               <columns>
-                <TableColumn fx:id="appAppIdCol" editable="false" prefWidth="100.0" resizable="false" sortType="DESCENDING" text="Appointment ID" />
-                <TableColumn fx:id="appTitleCol" editable="false" prefWidth="150.0" resizable="false" sortType="DESCENDING" text="Title" />
-                  <TableColumn fx:id="appDescriptionCol" editable="false" prefWidth="175.0" resizable="false" sortType="DESCENDING" text="Description" />
-                  <TableColumn fx:id="appLocationCol" editable="false" prefWidth="150.0" resizable="false" sortType="DESCENDING" text="Location" />
-                  <TableColumn fx:id="appTypeCol" editable="false" prefWidth="120.0" resizable="false" sortType="DESCENDING" text="Type" />
-                  <TableColumn fx:id="appStartCol" editable="false" prefWidth="120.0" resizable="false" sortType="DESCENDING" text="Start" />
-                  <TableColumn fx:id="appEndCol" editable="false" prefWidth="120.0" resizable="false" sortType="DESCENDING" text="End" />
-                  <TableColumn fx:id="appCustIdCol" editable="false" prefWidth="75.0" resizable="false" sortType="DESCENDING" text="Customer ID" />
-                  <TableColumn fx:id="appUserIdCol" editable="false" prefWidth="75.0" resizable="false" sortType="DESCENDING" text="User Id" />
-                  <TableColumn fx:id="appContactIdCol" editable="false" prefWidth="75.0" resizable="false" sortType="DESCENDING" text="Contact ID" />
+                <TableColumn fx:id="appAppIdCol" editable="false" prefWidth="100.0" resizable="false" text="Appointment ID" />
+                <TableColumn fx:id="appTitleCol" editable="false" prefWidth="150.0" resizable="false" text="Title" />
+                  <TableColumn fx:id="appDescriptionCol" editable="false" prefWidth="175.0" resizable="false" text="Description" />
+                  <TableColumn fx:id="appLocationCol" editable="false" prefWidth="150.0" resizable="false" text="Location" />
+                  <TableColumn fx:id="appTypeCol" editable="false" prefWidth="120.0" resizable="false" text="Type" />
+                  <TableColumn fx:id="appStartCol" editable="false" prefWidth="120.0" resizable="false" text="Start" />
+                  <TableColumn fx:id="appEndCol" editable="false" prefWidth="120.0" resizable="false" text="End" />
+                  <TableColumn fx:id="appCustIdCol" editable="false" prefWidth="75.0" resizable="false" text="Customer ID" />
+                  <TableColumn fx:id="appUserIdCol" editable="false" prefWidth="75.0" resizable="false" text="User Id" />
+                  <TableColumn fx:id="appContactIdCol" editable="false" prefWidth="75.0" resizable="false" text="Contact ID" />
               </columns>
             </TableView>
-            <Button layoutX="1000.0" layoutY="295.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" text="Delete Appointment" />
-            <Button layoutX="850.0" layoutY="295.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" text="Modify Appointment" />
+            <Button layoutX="1000.0" layoutY="295.0" mnemonicParsing="false" onAction="#deleteAppointment" prefHeight="30.0" prefWidth="130.0" text="Delete Appointment" />
+            <Button layoutX="850.0" layoutY="295.0" mnemonicParsing="false" onAction="#modifyAppointmentScreen" prefHeight="30.0" prefWidth="130.0" text="Modify Appointment" />
             <Button layoutX="700.0" layoutY="295.0" mnemonicParsing="false" onAction="#addAppointmentScreen" prefHeight="30.0" prefWidth="130.0" text="Add Appointment" />
             <Label layoutX="50.0" layoutY="10.0" prefHeight="30.0" text="Appointments">
                <font>
@@ -60,17 +60,18 @@
             </Label>
          </children>
       </Pane>
-      <RadioButton layoutX="1050.0" layoutY="765.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="150.0" selected="true" text="All appointments">
+      <RadioButton fx:id="allAppointmentsRadio" layoutX="1050.0" layoutY="765.0" mnemonicParsing="false" onAction="#getSelectedRadio" prefHeight="20.0" prefWidth="150.0" selected="true" text="All appointments">
          <toggleGroup>
             <ToggleGroup fx:id="toggleGroup" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton layoutX="850.0" layoutY="765.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="200.0" text="This month's appointments" toggleGroup="$toggleGroup" />
-      <RadioButton layoutX="650.0" layoutY="765.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="200.0" text="This week's appointments" toggleGroup="$toggleGroup" />
+      <RadioButton fx:id="monthAppointmentsRadio" layoutX="850.0" layoutY="765.0" mnemonicParsing="false" onAction="#getSelectedRadio" prefHeight="20.0" prefWidth="200.0" text="This month's appointments" toggleGroup="$toggleGroup" />
+      <RadioButton fx:id="weekAppointmentsRadio" layoutX="650.0" layoutY="765.0" mnemonicParsing="false" onAction="#getSelectedRadio" prefHeight="20.0" prefWidth="200.0" text="This week's appointments" toggleGroup="$toggleGroup" />
       <Label layoutX="60.0" layoutY="10.0" prefHeight="30.0" text="Main Screen">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
+      <Button layoutX="50.0" layoutY="760.0" mnemonicParsing="false" onAction="#toReportsScreen" prefHeight="30.0" prefWidth="130.0" text="Reports" />
    </children>
 </AnchorPane>

@@ -1,6 +1,5 @@
 package dataAccess;
 
-import model.Divisions;
 import utility.JDBC;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -9,10 +8,13 @@ import model.Countries;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Timestamp;
-
+/** This class handles SQL queries regarding countries. */
 public class DBCountries {
 
+    /** This method returns all countries in the database in an ObservableList.
+     * An SQL query returns all countries and columns for countries. A new country instance is created for each<br>
+     * country record using a while loop. The countries are added to an ObservableList.
+     * @return ObservableList of countries */
     public static ObservableList<Countries> getAllCountries() {
         ObservableList<Countries> countriesList = FXCollections.observableArrayList();
         String sql = "SELECT * FROM countries;";
@@ -37,6 +39,13 @@ public class DBCountries {
         return countriesList;
     }
 
+    /** This method returns one selected country from the database.
+     * An SQL query returns the country that has the division with the division ID of the parameter passed into the constructor and<br>
+     * columns for division ID, country ID, and country name. A while loop iterates through the single field and a new country instance is<br>
+     * created. the country ID and name are passed into the constructor of the new country, and it is returned.
+     * @param divisionID The division ID for which to find its associated country
+     * @return the country associated with the divisionID parameter
+     * */
     public static Countries getSelectedCountry(int divisionID) {
         Countries country = null;
         String sql = "SELECT Division_ID, countries.Country_ID, Country\n" +
@@ -60,26 +69,5 @@ public class DBCountries {
 
         return country;
     }
-
-    /*
-    public static void checkDateConversion() {
-        System.out.println("Check Date Test");
-        String sql = "SELECT Create_Date FROM countries;";
-
-        try {
-            PreparedStatement ps = JDBC.getConnection().prepareStatement(sql);
-            ResultSet rs = ps.executeQuery();
-
-            while(rs.next()) {
-                Timestamp ts = rs.getTimestamp("Create_Date");
-                System.out.println("Create Date: " + ts.toLocalDateTime().toString());
-            }
-
-        }
-        catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-    */
 
 }

@@ -33,11 +33,11 @@
         <TextField fx:id="addressTextField" layoutX="250.0" layoutY="350.0" prefHeight="30.0" prefWidth="150.0" />
         <TextField fx:id="postalCodeTextField" layoutX="250.0" layoutY="450.0" prefHeight="30.0" prefWidth="150.0" />
         <TextField fx:id="phoneTextField" layoutX="250.0" layoutY="550.0" prefHeight="30.0" prefWidth="150.0" />
-        <Label fx:id="custNameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="225.0" layoutY="200.0" prefHeight="30.0" prefWidth="200.0" text="label" textFill="RED" />
-        <Label fx:id="addressLabel" alignment="CENTER" layoutX="225.0" layoutY="300.0" prefHeight="30.0" prefWidth="200.0" text="Label" textFill="RED" />
-        <Label fx:id="postalCodeLabel" alignment="CENTER" layoutX="225.0" layoutY="400.0" prefHeight="30.0" prefWidth="200.0" text="Label" textFill="RED" />
-        <Label fx:id="phoneLabel" alignment="CENTER" layoutX="225.0" layoutY="500.0" prefHeight="30.0" prefWidth="200.0" text="Label" textFill="RED" />
-        <Label layoutX="100.0" layoutY="50.0" text="Add Customer Form">
+        <Label fx:id="custNameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="225.0" layoutY="200.0" prefHeight="30.0" prefWidth="200.0" textFill="RED" />
+        <Label fx:id="addressLabel" alignment="CENTER" layoutX="225.0" layoutY="300.0" prefHeight="30.0" prefWidth="200.0" textFill="RED" />
+        <Label fx:id="postalCodeLabel" alignment="CENTER" layoutX="225.0" layoutY="400.0" prefHeight="30.0" prefWidth="200.0" textFill="RED" />
+        <Label fx:id="phoneLabel" alignment="CENTER" layoutX="225.0" layoutY="500.0" prefHeight="30.0" prefWidth="200.0" textFill="RED" />
+        <Label layoutX="100.0" layoutY="50.0" text="Modify Customer Form">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>

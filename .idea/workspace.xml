@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="84d95914-2a17-41eb-bf7d-35031e37d336" name="Changes" comment="initial commit">
+    <list default="true" id="84d95914-2a17-41eb-bf7d-35031e37d336" name="Changes" comment="Finish login screen and all things related to customers.">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/access/DBCountries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataAccess/DBCountries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/MainScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/LoginScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/JDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/JDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/AddAppointmentScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AddAppointmentScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/AddCustomerScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AddCustomerScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/LoginScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/LoginScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/MainScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/MainScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ModifyCustomerScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ModifyCustomerScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dataAccess/DBAppointments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataAccess/DBAppointments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dataAccess/DBCountries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataAccess/DBCountries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dataAccess/DBCustomers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataAccess/DBCustomers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dataAccess/DBDivisions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataAccess/DBDivisions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dataAccess/DBUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataAccess/DBUsers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Appointments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Appointments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Contacts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Contacts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Countries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Countries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/MainScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/LoginScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Customers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Customers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Divisions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Divisions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utility/JDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/JDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utility/UsefulMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/UsefulMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/AddAppointmentScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/AddAppointmentScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/AddCustomerScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/AddCustomerScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/MainScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MainScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/ModifyCustomerScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ModifyCustomerScreen.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +38,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
-        <option value="Class" />
+        <option value="Interface" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -38,17 +58,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/jrine/IdeaProjects/C482Project",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pathVariables"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jrine/IdeaProjects/C482Project&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pathVariables&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\jrine\IdeaProjects\C195Project\src\controller" />
@@ -82,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660510986879</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Finish login screen and all things related to customers.">
+      <created>1660844154650</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1660844154650</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -98,6 +125,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="Finish login screen and all things related to customers." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish login screen and all things related to customers." />
   </component>
 </project>

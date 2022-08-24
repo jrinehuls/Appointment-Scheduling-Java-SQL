@@ -1,54 +1,37 @@
-//----------------------------This is here to use later for converting to eastern time----------------------------------
-//---------------------------start is a LocalDateTime object------------------------------------------------------------
-                ZoneId zoneId = ZoneId.of("America/New_York");
-                ZonedDateTime startZdt = start.atZone(ZoneId.systemDefault());
-                ZonedDateTime startZtdConverted = startZdt.withZoneSameInstant(zoneId);
-                LocalDateTime startLdt = startZtdConverted.toLocalDateTime();
-                System.out.println(startLdt);
+//---------------------------------------------------Lambda--------------------------------------------------
 
-//----------------------------------SQL Queries for month and week (Start is the column name)---------------------------
-SELECT *
-FROM appointments
-# WHERE month(Start) = 5;
-# WHERE week(Start) = 21;
-# WHERE day(Start) = 28;
+Abstract method is public abstract int number(parameter);
+there are no braces.
+Interface is like a class, but only has abstract methods.
+Functional interface is an interface with only one method (which is abstract).
+Lambda expression is like these:
+    InterfaceName variable = (parameter) -> operations;
+    InterfaceName variable = (parameter1, parameter2) -> operations;
+    InterfaceName variable = () -> operations;
 
-//-------------------------------Method to use for seeing if appointment in 15 minutes----------------------------------
-someTimeVariable = LocalDateTime.now();
+public Interface GeneralInterface() {
+    public abstract int numberSquared(int num);
+}
 
-//------------------------------For working on DBCustomers--------------------------------------------------------------
-    public static int addCustomer(Customers customer) throws SQLException {
-        String sql = "INSERT INTO customers (Customer_Name, Address, Postal_Code, Phone, Division_ID) VALUES(?, ?, ?, ?, ?);";
-        PreparedStatement ps = JDBC.getConnection().prepareStatement(sql);
-        ps.setString(1, customer.getName());
-        ps.setString(2, customer.getAddress());
-        ps.setString(3, customer.getPostalCode());
-        ps.setString(4, customer.getPhone());
-        ps.setInt(5, customer.getDivisionId());
-        int rowsAffected = ps.executeUpdate();
-        return rowsAffected;
-    }
+Go to another class and type something like this. (num doesn't have to be named same as abstract method.)
+    GeneralInterface numSquared = (num) -> num * num;
+    System.out.println(numSquared.numberSquared(5));
 
-    public static int modifyCustomer(Customers customer) throws SQLException {
-        String sql = "UPDATE customers Set Customer_Name = ?, Address = ?, Postal_Code = ?, Phone = ?, Division_ID = ? WHERE Customer_ID = ?";
-        PreparedStatement ps = JDBC.getConnection().prepareStatement(sql);
-        ps.setString(1, customer.getName());
-        ps.setString(2, customer.getAddress());
-        ps.setString(3, customer.getPostalCode());
-        ps.setString(4, customer.getPhone());
-        ps.setInt(5, customer.getDivisionId());
-        ps.setInt(6, customer.getCustomerId());
-        int rowsAffected = ps.executeUpdate();
-        return rowsAffected;
-    }
+String example:
+    public abstract String getMessage(String name);
 
-    public static int deleteCustomer(Customers customer) throws SQLException {
-        String sql = "DELETE FROM customers WHERE Customer_ID = ?";
-        PreparedStatement ps = JDBC.getConnection().prepareStatement(sql);
-        ps.setInt(1, customer.getCustomerId());
-        int rowsAffected = ps.executeUpdate();
-        return rowsAffected;
-    }
+    GeneralInterface message = (name) -> "My name is " + name;
+    System.out.println(message.getMessage("Jamal"));
 
-//---------------------------------------------------------------------------------------------------------------------
+If there's a bunch of stuff in the operations, do this (May require return statement, not sure):
+    GeneralInterface numSquared = (num) -> {
+    stuff;
+    stuff;
+    stuff;
+    };
 
+Local variables must be defined as final or effectively final before being used in lambda expressions.
+    using local variable (parameter in lambda cannot match local variable name, but operations can):
+    final int num = 5;
+    GeneralInterface numSquared = (n) -> num * num;
+    System.out.println(numSquared.numberSquared(num));
