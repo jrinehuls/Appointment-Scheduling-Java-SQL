@@ -4,7 +4,7 @@
 <li>Purpose: The purpose of this application is to add customers and schedule appointments for them for purposes of
     keeping business organized. The customers and appointments can also be modified.</li>
 <li>Author: Justin Rinehuls</li>
-<li>Contact email: jrinehu@wgu.edu</li>
+<li>Contact email: jrinehuls@gmail.com</li>
 <li>Application version: 1.0</li>
 <li>Date: 08/24/2022</li>
 <li>IDE version: IntelliJ IDEA Community Edition 2022.2</li>
